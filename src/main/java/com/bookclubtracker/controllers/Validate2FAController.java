@@ -1,0 +1,23 @@
+package com.bookclubtracker.controllers;
+
+import com.bookclubtracker.utils.TOTPUtil;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+public class Validate2FAController extends HttpServlet {
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String totpCode = request.getParameter("totpCode");
+        String secret = (String) request.getSession().getAttribute("totpSecret");
+
+        if (TOTPUtil.validateTOTPCode(secret, totpCode)) {
+            response.sendRedirect("dashboard.html");
+        } else {
+            response.sendRedirect("validate-2fa.html?error=invalid");
+        }
+    }
+}
