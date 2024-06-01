@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function fetchBookClubs() {
-    fetch('/view-clubs')
+    fetch('/view-clubs.html')
         .then(response => response.json())
         .then(data => {
             displayBookClubs(data);

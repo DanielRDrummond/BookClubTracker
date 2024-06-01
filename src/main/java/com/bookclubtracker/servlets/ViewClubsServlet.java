@@ -15,7 +15,7 @@ public class ViewClubsServlet extends HttpServlet {
         String password = "BookClub";
 
         // SQL query to fetch book club data
-        String query = "SELECT club_name, description, creator, creation_date FROM book_clubs";
+        String query = "SELECT club_name, description, created_by, created_at FROM public.book_clubs";
 
         try {
             // Establish connection
