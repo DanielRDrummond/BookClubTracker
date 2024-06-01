@@ -1,19 +1,38 @@
 document.addEventListener("DOMContentLoaded", function() {
-    fetch('/api/bookclubs')
+    // Fetch book clubs when the page loads
+    fetchBookClubs();
+});
+
+function fetchBookClubs() {
+    fetch('/view-clubs')
         .then(response => response.json())
         .then(data => {
-            const bookClubsList = document.getElementById('book-clubs-list');
-            data.forEach(club => {
-                const listItem = document.createElement('li');
-                listItem.innerHTML = `
-                    <h3>${club.name}</h3>
-                    <p>${club.description}</p>
-                    <p><strong>Created by:</strong> ${club.creator}</p>
-                `;
-                bookClubsList.appendChild(listItem);
-            });
+            displayBookClubs(data);
         })
         .catch(error => {
             console.error('Error fetching book clubs:', error);
         });
-});
+}
+
+function displayBookClubs(bookClubs) {
+    const bookClubsSection = document.getElementById('book-clubs-section');
+    bookClubsSection.innerHTML = ''; // Clear previous content
+    
+    bookClubs.forEach(club => {
+        const clubDiv = document.createElement('div');
+        clubDiv.classList.add('club');
+        
+        const nameElement = document.createElement('h2');
+        nameElement.textContent = club.name;
+        
+        const descriptionElement = document.createElement('p');
+        descriptionElement.textContent = club.description;
+        
+        clubDiv.appendChild(nameElement);
+        clubDiv.appendChild(descriptionElement);
+        
+        bookClubsSection.appendChild(clubDiv);
+    });
+}
+
+// Add similar functions for fetching and displaying meetings, discussions, and comments

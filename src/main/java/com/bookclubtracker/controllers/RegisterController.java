@@ -19,9 +19,9 @@ public class RegisterController extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     // JDBC URL, username, and password of MySQL server
-    private static final String JDBC_URL = "jdbc:postgresql://localhost:5432/bookclubtracker";
-    private static final String JDBC_USER = "yourusername";
-    private static final String JDBC_PASSWORD = "yourpassword";
+    private static final String JDBC_URL = "jdbc:postgresql://localhost:5432/postgres";
+    private static final String JDBC_USER = "postgres";
+    private static final String JDBC_PASSWORD = "BookClub";
 
     // SQL query to insert a new user into the database
     private static final String INSERT_USER_SQL = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";

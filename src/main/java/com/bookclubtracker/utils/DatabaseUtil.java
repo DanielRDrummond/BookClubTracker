@@ -30,4 +30,12 @@ public class DatabaseUtil {
         }
         return null;
     }
+    public static boolean createBookClub(BookClub bookClub) {
+        // Logic to save the book club to the database
+        // Return true if successful, false otherwise
+        boolean success = false;
+        // Your logic to save the book club to the database goes here
+        // Set success to true if the operation is successful
+        return success;
+    }
 }
