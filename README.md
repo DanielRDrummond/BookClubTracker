@@ -44,7 +44,7 @@ Book Club Tracker is a web application that allows users to create, join, and ma
 
 
 -- This script creates several tables:
-
+```sql
 -- users: Stores information about registered users, including their username, hashed password, and email.
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
@@ -106,22 +106,23 @@ CREATE TABLE comments (
     user_id INT REFERENCES users(id)
 );
 
+```
 
 ### Step 3: Configure the Application
 
 1. Open src/main/resources/application.properties.
 2. Configure the database connection settings:
-
+```bash
 db.url=jdbc:postgresql://localhost:5432/BookClub
 db.username=your_db_username
 db.password=your_db_password
-
+```
 
 
 ### Step 4: Build the Project
-
+```bash
 mvn clean install
-
+```
 
 ### Step 5: Deploy to Tomcat
 1. Copy the generated WAR file from the target directory to the webapps directory of your Tomcat installation.
@@ -133,6 +134,7 @@ Open your web browser and navigate to http://localhost:8080/book-club-tracker.
 
 
 ### Structure
+```css
 book-club-tracker/
 ├── src/
 │   ├── main/
@@ -173,7 +175,7 @@ book-club-tracker/
 │   │       └── profile.html
 ├── pom.xml
 └── README.md
-
+```
 
 ### Security Measures
 - User Access Control: Only authenticated users can access certain endpoints.
