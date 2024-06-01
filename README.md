@@ -31,9 +31,10 @@ Book Club Tracker is a web application that allows users to create, join, and ma
 ## Setup Instructions
 
 ### Step 1: Clone the Repository
-   ```bash
+```bash
    git clone https://github.com/yourusername/book-club-tracker.git
    cd book-club-tracker
+```
 
 ### Step 2: Setup PostgreSQL Database
 
@@ -41,7 +42,7 @@ Book Club Tracker is a web application that allows users to create, join, and ma
 2. Create a new database named `BookClub`.
 3. Execute the following SQL script to create the necessary tables:
 
-```sql
+
 -- This script creates several tables:
 
 -- users: Stores information about registered users, including their username, hashed password, and email.
