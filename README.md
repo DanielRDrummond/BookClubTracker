@@ -32,8 +32,8 @@ Book Club Tracker is a web application that allows users to create, join, and ma
 
 ### Step 1: Clone the Repository
 ```bash
-   git clone https://github.com/yourusername/book-club-tracker.git
-   cd book-club-tracker
+   git clone https://github.com/DanielRDrummond/BookClubTracker.git
+   cd BookClubTracker
 ```
 
 ### Step 2: Setup PostgreSQL Database
