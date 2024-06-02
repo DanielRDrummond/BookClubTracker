@@ -130,12 +130,12 @@ mvn clean install
 
 
 ### Step 6: Access the Application
-Open your web browser and navigate to http://localhost:8080/book-club-tracker.
+Open your web browser and navigate to http://localhost:8080/bookclubtracker.
 
 
 ### Structure
 ```css
-book-club-tracker/
+bookclubtracker/
 ├── src/
 │   ├── main/
 │   │   ├── java/
