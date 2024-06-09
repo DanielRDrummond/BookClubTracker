@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class Main {
     // JDBC URL of your PostgreSQL server
-    private static final String JDBC_URL = "jdbc:postgresql://localhost:5432/postgres";
+    private static final String JDBC_URL = "jdbc:postgresql://localhost:5432/BookClub";
     // Username and password for your PostgreSQL server
     private static final String JDBC_USER = "postgres";
     private static final String JDBC_PASSWORD = "BookClub";
@@ -19,16 +19,11 @@ public class Main {
         Connection connection = initializeDatabase();
         if (connection != null) {
             System.out.println("Database connection established successfully.");
-            // Other initialization tasks...
+            // You can perform other initialization tasks here if needed
         } else {
             System.err.println("Failed to establish database connection.");
             // Handle initialization failure...
         }
-
-        // Other initialization tasks...
-
-        // Start server
-        startServer();
     }
 
     // Method to initialize database connection
@@ -44,11 +39,5 @@ public class Main {
         }
     }
 
-    // Example method to start server functionality
-    private static void startServer() {
-        System.out.println("Starting server...");
-        // Code to start server functionality (e.g., handle incoming requests, listen for connections) goes here
-    }
-
-    // Additional methods for other functionalities can be defined here
+    // Additional methods for other functionalities can be defined here if needed
 }

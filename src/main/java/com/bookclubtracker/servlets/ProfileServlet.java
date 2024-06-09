@@ -17,7 +17,7 @@ public class ProfileServlet extends HttpServlet {
         }
         
         // JDBC URL, username, and password
-        String jdbcUrl = "jdbc:postgresql://localhost:5432/postgres";
+        String jdbcUrl = "jdbc:postgresql://localhost:5432/bookclub";
         String dbUsername = "postgres";
         String dbPassword = "BookClub";
         

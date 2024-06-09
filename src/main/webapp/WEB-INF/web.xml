@@ -123,4 +123,19 @@
         <servlet-name>CommentsServlet</servlet-name>
         <url-pattern>/comments</url-pattern>
     </servlet-mapping>
+
+    <!-- Register Servlet -->
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>com.bookclubtracker.servlets.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+    
+<!-- Listener for application initialization -->    
+    <listener>
+        <listener-class>com.bookclubtracker.AppInitializer</listener-class>
+    </listener>
 </web-app>

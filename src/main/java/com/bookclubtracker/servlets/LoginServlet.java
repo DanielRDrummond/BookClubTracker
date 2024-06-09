@@ -14,7 +14,7 @@ public class LoginServlet extends HttpServlet {
         String password = request.getParameter("password");
         
         // JDBC URL, username, and password
-        String jdbcUrl = "jdbc:postgresql://localhost:5432/postgres";
+        String jdbcUrl = "jdbc:postgresql://localhost:5432/bookclub";
         String dbUsername = "postgres";
         String dbPassword = "BookClub";
         

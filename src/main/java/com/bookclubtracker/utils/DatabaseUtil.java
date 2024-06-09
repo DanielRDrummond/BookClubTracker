@@ -9,7 +9,7 @@ import com.bookclubtracker.model.User;
 import com.bookclubtracker.model.BookClub;
 
 public class DatabaseUtil {
-    private static final String DB_URL = "jdbc:postgresql://localhost:5432/bookclub";
+    private static final String DB_URL = "jdbc:postgresql://localhost:5432/BookClub";
     private static final String DB_USER = "postgres";
     private static final String DB_PASSWORD = "BookClub";
 

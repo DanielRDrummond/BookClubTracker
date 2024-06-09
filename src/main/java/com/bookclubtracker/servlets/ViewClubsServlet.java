@@ -10,7 +10,7 @@ public class ViewClubsServlet extends HttpServlet {
             throws ServletException, IOException {
 
         // JDBC URL, username, and password
-        String jdbcUrl = "jdbc:postgresql://localhost:5432/postgres";
+        String jdbcUrl = "jdbc:postgresql://localhost:5432/bookclub";
         String username = "postgres";
         String password = "BookClub";
 
